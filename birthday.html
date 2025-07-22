@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, #1e1e2f, #3e3e5f);
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+    }
+    .container {
+      padding: 4rem 2rem;
+    }
+    h1 {
+      font-size: 3rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .typing {
+      font-size: 1.5rem;
+      border-right: 2px solid #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 4s steps(40, end) forwards, blink .75s step-end infinite;
+      margin: 1rem auto;
+    }
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    @keyframes blink {
+      from, to { border-color: transparent }
+      50% { border-color: white; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .photo-section img {
+      width: 200px;
+      height: auto;
+      margin: 1rem;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    }
+    .message {
+      margin: 2rem auto;
+      font-size: 1.2rem;
+      max-width: 600px;
+      animation: fadeIn 2s ease-in-out 2s both;
+    }
+    .confetti {
+      display: none;
+      font-size: 2rem;
+      margin-top: 3rem;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    button {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      background-color: #ff69b4;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>When I couldn't meet you...</h1>
+    <div class="typing">...I created something unforgettable.</div>
+
+    <div class="photo-section">
+      <img src="https://i.ibb.co/gZSYXtz3/Aycrilic-Print-8-X12-3mm-Aycrilic-Gum.jpg" alt="Memory 1" />
+      <img src="https://i.ibb.co/7Wym8bS/sample-photo.jpg" alt="Memory 2" /> <!-- Replace with a different meaningful photo -->
+    </div>
+
+    <div class="message">
+      <p>Happy Birthday, Switi! 🎂🎉</p>
+      <p>You're miles away but always close to my heart. I hope this small surprise makes you smile as wide as your heart deserves. 💖</p>
+    </div>
+
+    <button onclick="showConfetti()">Reveal Your Surprise</button>
+    <div id="confetti" class="confetti">🎉🎈 Happy Birthday! 🎈🎉</div>
+  </div>
+
+  <script>
+    function showConfetti() {
+      let confetti = document.getElementById('confetti');
+      confetti.style.display = 'block';
+      setTimeout(() => confetti.style.opacity = 1, 50);
+    }
+  </script>
+</body>
+</html>
